@@ -9,12 +9,12 @@ package main
 import "fmt"
 
 func factorial(factorialnum int) int {
-	max := 1
+	adder := 1
 	for i := 1; i <= factorialnum; i++ {
-		max = max * i
+		adder = max * i
 	}
 
-	return max
+	return adder
 }
 
 func main() {

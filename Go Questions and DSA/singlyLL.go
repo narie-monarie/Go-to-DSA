@@ -33,6 +33,19 @@ func initial() {
 	third.next = tail
 }
 
+func appendval(value int) {
+	n := head
+	for {
+		if n == nil {
+			break
+		}
+		n = n.next
+	}
+	var newNode *Node = new(Node)
+	n = newNode
+	newNode.next = n
+}
+
 func output(node *Node) {
 	p := node
 	for {
@@ -46,5 +59,6 @@ func output(node *Node) {
 
 func main() {
 	initial()
+	appendval(2)
 	output(head)
 }

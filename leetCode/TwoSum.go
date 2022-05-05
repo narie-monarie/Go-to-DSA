@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-/*func twoSum(arr []int, target int) []int {
+func twoSum(arr []int, target int) []int {
 	for i := 0; i < len(arr)-1; i++ {
 		for j := i; j < len(arr); j++ {
 			if arr[i]+arr[j] == target {
@@ -12,7 +12,7 @@ import "fmt"
 	}
 	return []int{}
 
-}*/
+}
 
 //sorted array
 func twoSum(arr []int, target int) []int {

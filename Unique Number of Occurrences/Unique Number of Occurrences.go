@@ -13,5 +13,4 @@ func uniqueOccurrences(arr []int) bool {
 		m[j] = true
 	}
 	return true
-	i
 }

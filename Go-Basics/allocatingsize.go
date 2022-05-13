@@ -13,4 +13,13 @@ func main() {
 
 	fmt.Println("len: ", len(names))
 	fmt.Println("len: ", cap(names))
+
+	moreNames := []string{"Melo", "Menlo"}
+	moreNames2 := []string{"Melo", "Menlo"}
+	appendNames := append(names, moreNames...)
+
+	//same := moreNames2 == moreNames
+
+	fmt.Println(appendNames)
+	//	fmt.Println(same)
 }

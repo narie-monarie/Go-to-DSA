@@ -6,16 +6,6 @@
  * }
  */
 func deleteNode(node *ListNode) {
-    if node == nil{
-        return
-    }
-    
-    temp := node
-    for temp.Next.Next != nil{
-        temp.Val = temp.Next.Val
-        temp = temp.Next
-    }
-    
-    temp.Val = temp.Next.Val
-    temp.Next = nil
+    node.Val = node.Next.Val
+    node.Next = node.Next.Next
 }

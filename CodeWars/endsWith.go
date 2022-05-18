@@ -12,6 +12,11 @@ func solution(str, ending string) bool {
 	return false
 }
 
+//alternative Solutions
+
+func solutions(str, ending string) bool {
+	return len(str) >= len(ending) && str[len(str)-len(ending):] == ending
+}
 func main() {
 	fmt.Println(solution("abc", "d"))
 }

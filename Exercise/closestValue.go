@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -27,8 +26,4 @@ func isPalindrome(s string) bool {
 		end--
 	}
 	return true
-}
-
-func main() {
-	fmt.Println()
 }

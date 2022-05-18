@@ -24,5 +24,5 @@ func isPalindrome(s string) bool {
 }
 
 func main() {
-	fmt.Println("vim-go")
+	fmt.Println("Hello World")
 }

@@ -5,11 +5,15 @@ import (
 	"strings"
 )
 
-func reverse_words(s string) {
+func reverse_words(s string) string {
 	words := strings.Fields(s)
 	for i, j := 0, len(words)-1; i < j; i, j = i+1, j-1 {
 		words[i], words[j] = words[j], words[i]
 	}
+
+	word := strings.Join(words, " ")
+
+	return word
 }
 func ReverseWord(str string) string {
 	rns := []rune(str)

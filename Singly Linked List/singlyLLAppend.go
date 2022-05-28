@@ -25,7 +25,7 @@ func initial() {
 	third.next = tail
 }
 
-func add(value int) {
+func addEnd(value int) {
 	var newNode *Node = &Node{
 		value: value,
 		next:  nil,
@@ -34,20 +34,30 @@ func add(value int) {
 	tail = newNode
 }
 
+func addStart(value int) {
+	var newNode *Node = &Node{
+		value: value,
+		next:  nil,
+	}
+	newNode.next = head
+	head = newNode
+
+}
+
 func output(node *Node) {
-	p := node
 	for {
-		if p == nil {
+		if node == nil {
 			break
 		}
-		fmt.Printf("%d->", p.value)
-		p = p.next
+		fmt.Printf("%d->", node.value)
+		node = node.next
 	}
 }
 
 func main() {
 	appender := 5
 	initial()
-	add(appender)
+	addEnd(appender)
+	addStart(appender)
 	output(head)
 }

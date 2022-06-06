@@ -44,10 +44,10 @@ func addStart(value int) {
 
 }
 
-func searchIndex(pos int) int {
+func searchIndex(position int) int {
 	index := 0
 	temp := head
-	for temp.value != pos {
+	for temp.value != position {
 		index++
 		temp = temp.next
 	}

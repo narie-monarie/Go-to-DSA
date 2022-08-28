@@ -1,4 +1,3 @@
 # Go to DSA
+## Why LeetCode in Go, Cpp and C#? 
 
-Storing all the progress of my Go, C++ && C# journey from `0 to maybe 100`
-All these questions are from leetcode btw

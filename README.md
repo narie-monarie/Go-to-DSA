@@ -1,3 +1,2 @@
-# Go to DSA
-## Why LeetCode in Go, Cpp and C#? 
+# Go | C++ | C#
 

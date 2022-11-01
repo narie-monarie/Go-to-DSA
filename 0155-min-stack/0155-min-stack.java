@@ -1,28 +1,46 @@
 class MinStack {
-    Stack<Integer> stack = new Stack<>();
-    
+    Stack < Long > st = new Stack < Long > ();
+    Long mini;
+
+    /** initialize your data structure here. */
     public MinStack() {
-        this.stack = new Stack<>();
+        mini = Long.MAX_VALUE;
     }
-    
-    public void push(int val) {
-        stack.push(val);
+
+    public void push(int value) {
+        Long val = Long.valueOf(value);
+        if (st.isEmpty()) {
+            mini = val;
+            st.push(val);
+        } else {
+            if (val < mini) {
+                st.push(2 * val - mini);
+                mini = val;
+            } else {
+                st.push(val);
+            }
+        }
     }
-    
+
     public void pop() {
-        stack.pop();
+        if (st.isEmpty()) return;
+
+        Long val = st.pop();
+        if (val < mini) {
+            mini = 2 * mini - val;
+        }
     }
-    
+
     public int top() {
-        return stack.peek();
+        Long val = st.peek();
+        if (val < mini) {
+            return mini.intValue();
+        }
+        return val.intValue();
     }
-    
+
     public int getMin() {
-        Integer min = Integer.MAX_VALUE; 
-        for(int a : stack)
-            min = Math.min(min, a);
-        
-        return min;
+        return mini.intValue();
     }
 }
 
